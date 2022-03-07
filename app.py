@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 
 st.title('Fraudulent Transaction detection')
+st.write("Since i'm using the free cloud prediction app will take some time to predict, please don't click predict button repeatedly")
+#https://share.streamlit.io/ashwath-shetty/fraudulent-transaction-detection/main/app.py
 
 def preprocess(data):
     '''
