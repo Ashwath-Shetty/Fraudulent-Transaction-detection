@@ -25,10 +25,12 @@ you can assume that a transaction happens sequentially within the same time step
     └── README.md
 
 why data folder is empty?
-<br><li>since i'm using github free version and it can't store the big file. add the complete data inside data folder.
+<br><li>since i'm using github free version,it will not allow me to store the big file. 
+    <br><li> add the complete data inside data folder before training.
+        
 
 How can i train the model?
-<br>step 1: go to command prompt
+<br>step 1: go to command prompt and navigate to project folder(cd project/folder/path)
 <br>step 2: enter pip install - r requirements.txt
 <br>step 3 : navigate to src folder (cd path/src)
 <br>step 4: type python train.py and hit enter.
