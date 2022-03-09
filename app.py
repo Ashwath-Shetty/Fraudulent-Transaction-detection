@@ -5,6 +5,7 @@ import pandas as pd
 
 st.title('Fraudulent Transaction detection')
 st.write("Since i'm using the free cloud prediction app will take some time to predict, please don't click predict button repeatedly")
+
 #https://share.streamlit.io/ashwath-shetty/fraudulent-transaction-detection/main/app.py
 
 def preprocess(data):
@@ -32,8 +33,8 @@ def main():
     # UI form to take i/p from users.
     step=st.number_input("Enter the steps",key='1')
     type=st.selectbox('Select the type of transaction',['PAYMENT', 'TRANSFER', 'CASH_OUT', 'DEBIT', 'CASH_IN'])
-    amount=st.number_input("Enter the amount",min_value=None,value=29,key='2')
-    nameOrig= st.text_input("Enter the name orig",help="Enter the name of the customer who started the transcation")
+    amount=st.number_input("Enter the amount",min_value=None,key='2')
+    nameOrig= st.text_input("Enter the name orig",value='',help="Enter the name of the customer who started the transcation")
     oldbalanceOrig= st.number_input("Enter the old balance of orig",help="initial balance before the transcation")
     newbalanceOrig= st.number_input("Enter the new balance of orig",help="balance after the transcation")
     nameDest= st.text_input("Enter the name Dest",help="recipient ID of the transaction")
@@ -43,13 +44,21 @@ def main():
     cols=['step', 'type', 'amount', 'nameOrig', 'oldbalanceOrig',
        'newbalanceOrig', 'nameDest', 'oldbalanceDest', 'newbalanceDest']
     df=pd.DataFrame(values,columns=cols)
+    print(nameOrig=='')
+    print(values)
     # saved model loading for prediction
     model=joblib.load("./models/model.joblib", mmap_mode=None)
     # preprocessing and prediction
     if (st.button('predict')):
-        final_df=preprocess(df)
-        result=model.predict(final_df)
-        st.write("result is ",result[0])
+        all_entered=True
+        for val in values:
+            if '' in val:
+                st.write("please enter all the fields")
+                all_entered=False
+        if all_entered:
+            final_df=preprocess(df)
+            result=model.predict(final_df)
+            st.write("result is ",result[0])
 
 if __name__=='__main__':
     main()
