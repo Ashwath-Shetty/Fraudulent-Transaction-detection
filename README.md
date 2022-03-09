@@ -9,13 +9,17 @@ not. You are also to assume that the previous API calls are to be stored in orde
 features relevant to finding fraud. The API calls will include the time step of the transaction, so
 you can assume that a transaction happens sequentially within the same time step.
 
-### A typical top-level directory layout
+## Folder Structure
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
+    ├── data                     # will have original Data, train and test data files.
+    ├── models                   # saved models
+    ├── notebooks                # Jupyter notebooks.
+    ├── src                     # Source files 
+    │    ├── config.py          # configuration files
+    │    ├── train.py           # training code
+    ├── utils                    # utils for the prediction
+    ├── app.py                   # deployed main app code.
+    ├── Procfile                 # Procfile incase if you want to deploy to Heroku(optional).
+    ├── requirements.txt         # requirements
     └── README.md
