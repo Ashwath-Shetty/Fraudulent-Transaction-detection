@@ -25,7 +25,7 @@ you can assume that a transaction happens sequentially within the same time step
     └── README.md
 
 why data folder is empty?
-because i'm using github free version and it can't store the big file. add the complete data inside data folder.
+<br>because i'm using github free version and it can't store the big file. add the complete data inside data folder.
 
 How can i train the model?
 step 1: go to command prompt
