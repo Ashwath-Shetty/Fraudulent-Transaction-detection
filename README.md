@@ -35,11 +35,11 @@ step 4: type python train.py and hit enter.
 after training model will be saved in models folder and train, test data used for training will be stored in data folder.
 
 How to run the app on local host?
-go to command prompt and enter streamlit run app.py
+<br>go to command prompt and enter streamlit run app.py
 
 ## Deployment
 Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to github will automatically deploy to the streamlit.
-i haven't Dockerized the appication because my PC configuration is very poor but i have added the docker file for future improvements.
+<br>i haven't Dockerized the appication because my PC configuration is very poor but i have added the docker file for future improvements.
 
 ## Tools and languages used
 1. Python
@@ -52,6 +52,6 @@ i haven't Dockerized the appication because my PC configuration is very poor but
 8. Various ML Modelling and preprocessing techniques.
 9. streamlit cloud for deployment
 ## Future improvement
-improve the UI for APP and cover more edge cases and error handling.
-improved hyper parameter optimization using gridsearchcv
-Stacking and Ensembling.
+<br>improve the UI for APP and cover more edge cases and error handling.
+<br>improved hyper parameter optimization using gridsearchcv
+<br>Stacking and Ensembling.
