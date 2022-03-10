@@ -44,14 +44,14 @@ How to run the app on local host?
 <br><li>go to command prompt and navigate to project folder and enter streamlit run app.py
     
 ## Technical Details
-<li> here's the complete EDA notebook
+<li>### here's the complete EDA notebook
     <br>https://www.kaggle.com/ashwathshetty/fraud-detection-eda/notebook
     <br>if you want to pull just use this command -> kaggle kernels pull ashwathshetty/fraud-detection-eda
-<li> here's the Modeling notebook
+<li> ### here's the Modeling notebook
     <br>https://www.kaggle.com/ashwathshetty/plentina-code-challenge/notebook
-<li> some high level details about the modelling
+<li> ###some high level details about the modelling
     <br> 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
-    <br> since the data is imbalanced roc-auc score is.
+    <br> since the data is imbalanced roc-auc score is used as a evaluation metrics.
     <br> multiple model has been tried and decision tree worked well at the end.
     <br> randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
     <br> finally all the models and configurations are exported to joblib format for inference and deployment.
