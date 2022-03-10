@@ -51,9 +51,9 @@ How to run the app on local host?
     <br>https://www.kaggle.com/ashwathshetty/plentina-code-challenge/notebook
 <li> some high level details about the modelling
     <br>1. 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
-    <br>2. since the data is imbalanced roc-auc score is used as a evaluation metrics.
+    <br>2. since the data is imbalanced roc-auc score is used as a evaluation metrics. train has an average score of 0.96184328592481 and test 0.9231405985587756
     <br>3. multiple model has been tried and decision tree worked well at the end.
-    <br>4. randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
+    <br>4. randomizedsearchcv with the same 5 folds as above mentioned above has been used. (since the data is huge i have avoided the grid searchcv.)
     <br>5. finally all the models and configurations are exported to joblib format for inference and deployment.
         
 ## Deployment
@@ -74,3 +74,4 @@ How to run the app on local host?
 <br><li>improve the UI for APP and cover more edge cases and error handling.
 <br><li>improved hyper parameter optimization using gridsearchcv
 <br><li>Stacking and Ensembling.
+<br><li>Packaging using Docker.
