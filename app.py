@@ -18,8 +18,6 @@ def preprocess(data):
     le=joblib.load("./utils/le.joblib", mmap_mode=None)
     data['dif_dest']=data['newbalanceDest']-data['oldbalanceDest']
     data['amount_dif']=data['newbalanceOrig']-data['amount']
-    data['dif_dest']=data['newbalanceDest']-data['oldbalanceDest']
-    data['amount_dif']=data['newbalanceOrig']-data['amount']
 
     cat_col=['type', 'nameOrig', 'nameDest']
     num_col=['step', 'amount', 'oldbalanceOrig', 'newbalanceOrig', 'oldbalanceDest',

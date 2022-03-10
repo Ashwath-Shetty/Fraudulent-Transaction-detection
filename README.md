@@ -30,15 +30,18 @@ you can assume that a transaction happens sequentially within the same time step
 why data folder is empty?
 <br><li>since i'm using github free version,it will not allow me to store the big file. 
     <br><li> add the complete data inside data folder before training.
+
         
 
 How can i train the model?
-<br> clone the repository using https://github.com/Ashwath-Shetty/Fraudulent-Transaction-detection.git 
-<br>step 1: go to command prompt and navigate to project folder(cd project/folder/path)
-<br>step 2: enter pip install - r requirements.txt
-<br>step 3 : navigate to src folder (cd path/src)
-<br>step 4: type python train.py and hit enter.
-<br>after training model will be saved in models folder and train, test data used for training will be stored in data folder.
+<br>step 1: clone the repository using https://github.com/Ashwath-Shetty/Fraudulent-Transaction-detection.git 
+<br>step 2: add the data inside data folder and change the training file path to your path in the config file(which is inside src   
+        folder).
+<br>step 3: go to command prompt and navigate to the project folder(cd project/folder/path)
+<br>step 4: enter pip install - r requirements.txt
+<br>step 5 : navigate to src folder (cd path/src)
+<br>step 6: type python train.py and hit enter.
+<br>after training model will be saved in models folder and train, test data used for training will be stored in the data folder.
 
 How to run the app on local host?
 <br><li>go to command prompt and navigate to project folder and enter streamlit run app.py
@@ -59,6 +62,7 @@ How to run the app on local host?
 ## Deployment
 <li>Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to the github will automatically deploy to the streamlit.
 <br><li>i haven't Dockerized the appication because my PC configuration is very poor but i have added the docker file for future improvements.
+<br><li> and also there's a Dockerrun.aws.json file which will help to deploy the dockerized container to AWS Fargate.
 
 ## Tools and languages used
 1. Python
