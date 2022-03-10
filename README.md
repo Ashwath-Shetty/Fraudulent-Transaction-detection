@@ -1,4 +1,7 @@
 # Fraudulent-Transaction-Detection
+## Live Demo
+https://share.streamlit.io/ashwath-shetty/fraudulent-transaction-detection/main/app.py
+
 ## Problem Statement
 You are provided a synthetic dataset for a mobile payments application. In this dataset, you are
 provided the sender and recipient of a transaction as well as whether transactions are tagged as
@@ -38,9 +41,22 @@ How can i train the model?
 
 How to run the app on local host?
 <br><li>go to command prompt and enter streamlit run app.py
-
+    
+## Technical Details
+<li> here's the complete EDA notebook
+    <br>https://www.kaggle.com/ashwathshetty/fraud-detection-eda/notebook
+    <br>if you want to pull just use this command -> kaggle kernels pull ashwathshetty/fraud-detection-eda
+<li> here's the Modeling notebook
+    <br>https://www.kaggle.com/ashwathshetty/plentina-code-challenge/notebook
+<li> some high level details about the modelling
+    <li> 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
+    <li> since the data is imbalanced roc-auc score is.
+    <li> multiple model has been tried and decision tree worked well at the end.
+    <li> randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
+    <li> finally all the models and configurations are exported to joblib format for inference and deployment.
+        
 ## Deployment
-<li>Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to github will automatically deploy to the streamlit.
+<li>Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to the github will automatically deploy to the streamlit.
 <br><li>i haven't Dockerized the appication because my PC configuration is very poor but i have added the docker file for future improvements.
 
 ## Tools and languages used
