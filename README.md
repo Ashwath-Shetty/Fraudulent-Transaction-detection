@@ -33,6 +33,7 @@ why data folder is empty?
         
 
 How can i train the model?
+<br> clone the repository using https://github.com/Ashwath-Shetty/Fraudulent-Transaction-detection.git 
 <br>step 1: go to command prompt and navigate to project folder(cd project/folder/path)
 <br>step 2: enter pip install - r requirements.txt
 <br>step 3 : navigate to src folder (cd path/src)
