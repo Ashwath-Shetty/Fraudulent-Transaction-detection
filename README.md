@@ -44,7 +44,7 @@ How to run the app on local host?
 <br><li>go to command prompt and navigate to project folder and enter streamlit run app.py
     
 ## Technical Details
-### here's the complete EDA notebook
+    <h6>here's the complete EDA notebook</h6>
     <br>https://www.kaggle.com/ashwathshetty/fraud-detection-eda/notebook
     <br>if you want to pull just use this command -> kaggle kernels pull ashwathshetty/fraud-detection-eda
 <li> ### here's the Modeling notebook
