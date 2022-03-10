@@ -35,8 +35,7 @@ why data folder is empty?
 
 How can i train the model?
 <br>step 1: clone the repository using https://github.com/Ashwath-Shetty/Fraudulent-Transaction-detection.git 
-<br>step 2: add the data inside data folder and change the training file path to your path in the config file(which is inside src   
-        folder).
+<br>step 2: add the data inside data folder and change the training file path to your path in the config file(which is inside src folder).
 <br>step 3: go to command prompt and navigate to the project folder(cd project/folder/path)
 <br>step 4: enter pip install - r requirements.txt
 <br>step 5 : navigate to src folder (cd path/src)
@@ -79,3 +78,6 @@ How to run the app on local host?
 <br><li>improved hyper parameter optimization using gridsearchcv
 <br><li>Stacking and Ensembling.
 <br><li>Packaging using Docker.
+
+## Reach out to me here
+check out my [portfolio](https://ashwathshetty.netlify.app/)

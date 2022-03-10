@@ -57,6 +57,7 @@ def main():
             final_df=preprocess(df)
             result=model.predict(final_df)
             st.write("result is ",result[0])
+    st.write("check out my [portfolio](https://ashwathshetty.netlify.app/)")
 
 if __name__=='__main__':
     main()
