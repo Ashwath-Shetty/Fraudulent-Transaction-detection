@@ -50,11 +50,11 @@ How to run the app on local host?
 <li> here's the Modeling notebook
     <br>https://www.kaggle.com/ashwathshetty/plentina-code-challenge/notebook
 <li> some high level details about the modelling
-    1. 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
-    2. since the data is imbalanced roc-auc score is used as a evaluation metrics.
-    3. multiple model has been tried and decision tree worked well at the end.
-    4. randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
-    5. finally all the models and configurations are exported to joblib format for inference and deployment.
+    <br>1. 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
+    <br>2. since the data is imbalanced roc-auc score is used as a evaluation metrics.
+    <br>3. multiple model has been tried and decision tree worked well at the end.
+    <br>4. randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
+    <br>5. finally all the models and configurations are exported to joblib format for inference and deployment.
         
 ## Deployment
 <li>Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to the github will automatically deploy to the streamlit.
