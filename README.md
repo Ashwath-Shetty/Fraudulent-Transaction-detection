@@ -41,7 +41,7 @@ How can i train the model?
 <br>after training model will be saved in models folder and train, test data used for training will be stored in data folder.
 
 How to run the app on local host?
-<br><li>go to command prompt and enter streamlit run app.py
+<br><li>go to command prompt and navigate to project folder and enter streamlit run app.py
     
 ## Technical Details
 <li> here's the complete EDA notebook
