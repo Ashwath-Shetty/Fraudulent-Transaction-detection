@@ -65,6 +65,9 @@ async  def predict_fraud(item :ClientData):
   #   # Converting JSON to Pandas DataFrame
   # input_df = pd.DataFrame([input_data])
   h=item.dict()
+  # print("fast",fastapi.__version__)
+  # print("fast",pydantic.__version__)
+  # print("fast",uvicorn.__version__)
   print('---------',h)
   df=pd.DataFrame.from_dict(h, orient="columns")
   print("------------->",df.head())
