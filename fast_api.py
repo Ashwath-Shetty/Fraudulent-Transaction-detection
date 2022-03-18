@@ -28,17 +28,27 @@ def preprocess(data):
     train_X=np.concatenate([le_train,scale_train],axis=1)
     return train_X
 
+# class ClientData(BaseModel):
+#     step: List[int]
+#     type: List[str]
+#     amount: List[float]
+#     nameOrig:  List[str]
+#     oldbalanceOrig: List[float]
+#     newbalanceOrig: List[float]
+#     nameDest:  List[str]
+#     oldbalanceDest: List[float]
+#     newbalanceDest: List[float]
 
 class ClientData(BaseModel):
-    step: List[int]
-    type: List[str]
-    amount: List[float]
-    nameOrig:  List[str]
-    oldbalanceOrig: List[float]
-    newbalanceOrig: List[float]
-    nameDest:  List[str]
-    oldbalanceDest: List[float]
-    newbalanceDest: List[float]
+    step: int
+    type: str
+    amount: float
+    nameOrig:  str
+    oldbalanceOrig: float
+    newbalanceOrig: float
+    nameDest:  str
+    oldbalanceDest: float
+    newbalanceDest: float
 
 
 app = FastAPI()
@@ -52,6 +62,24 @@ def ping():
   This is a first docstring.
   '''
   return ('pong', 200)
+
+
+# @app.post('/basic_predict')
+# async def basic_predict(request: Request):
+#   '''
+#   This is a first docstring.
+#   '''
+#   # Getting the JSON from the body of the request
+#   input_data = await request.json()
+
+#     # Converting JSON to Pandas DataFrame
+#   input_df = pd.DataFrame([input_data])
+#   model=joblib.load("./models/model.joblib", mmap_mode=None)
+#   # Getting the prediction 
+#   pred = model.predict(input_df)[0]
+
+#   return pred
+
 
 @app.post("/predict-fraud")
 async  def predict_fraud(item :ClientData):
@@ -69,7 +97,8 @@ async  def predict_fraud(item :ClientData):
   # print("fast",pydantic.__version__)
   # print("fast",uvicorn.__version__)
   print('---------',h)
-  df=pd.DataFrame.from_dict(h, orient="columns")
+  #df=pd.DataFrame.from_dict(h, orient="columns")
+  df=pd.DataFrame([h])
   print("------------->",df.head())
   inp=preprocess(df)
   
