@@ -64,7 +64,9 @@ payload = json.dumps(
 # print(response.text)
 
 import requests
-r = requests.post('http://127.0.0.1:8000/predict-fraud', 
+#url = "https://fraud-t-detection.herokuapp.com/predict-fraud"
+url='http://127.0.0.1:8000/predict-fraud'
+r = requests.post(url, 
 json = {
 "step":1,
 "type":"PAYMENT",
