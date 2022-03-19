@@ -28,27 +28,27 @@ def preprocess(data):
     train_X=np.concatenate([le_train,scale_train],axis=1)
     return train_X
 
-# class ClientData(BaseModel):
-#     step: List[int]
-#     type: List[str]
-#     amount: List[float]
-#     nameOrig:  List[str]
-#     oldbalanceOrig: List[float]
-#     newbalanceOrig: List[float]
-#     nameDest:  List[str]
-#     oldbalanceDest: List[float]
-#     newbalanceDest: List[float]
-
 class ClientData(BaseModel):
-    step: int
-    type: str
-    amount: float
-    nameOrig:  str
-    oldbalanceOrig: float
-    newbalanceOrig: float
-    nameDest:  str
-    oldbalanceDest: float
-    newbalanceDest: float
+    step: List[int]
+    type: List[str]
+    amount: List[float]
+    nameOrig:  List[str]
+    oldbalanceOrig: List[float]
+    newbalanceOrig: List[float]
+    nameDest:  List[str]
+    oldbalanceDest: List[float]
+    newbalanceDest: List[float]
+
+# class ClientData(BaseModel):
+#     step: int
+#     type: str
+#     amount: float
+#     nameOrig:  str
+#     oldbalanceOrig: float
+#     newbalanceOrig: float
+#     nameDest:  str
+#     oldbalanceDest: float
+#     newbalanceDest: float
 
 
 app = FastAPI()
@@ -97,8 +97,8 @@ async  def predict_fraud(item :ClientData):
   # print("fast",pydantic.__version__)
   # print("fast",uvicorn.__version__)
   print('---------',h)
-  #df=pd.DataFrame.from_dict(h, orient="columns")
-  df=pd.DataFrame([h])
+  df=pd.DataFrame.from_dict(h, orient="columns")
+  #df=pd.DataFrame([h])
   print("------------->",df.head())
   inp=preprocess(df)
   
