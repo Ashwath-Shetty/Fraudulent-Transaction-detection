@@ -14,12 +14,13 @@ def preprocess(data):
     data: i/p data user entered in the form.
 
     '''
-    scaler=joblib.load("./utils/scale.joblib", mmap_mode=None)
-    le=joblib.load("./utils/le.joblib", mmap_mode=None)
+    scaler=joblib.load("./utils/scale2.joblib", mmap_mode=None)
+    le=joblib.load("./utils/le2.joblib", mmap_mode=None)
     data['dif_dest']=data['newbalanceDest']-data['oldbalanceDest']
     data['amount_dif']=data['newbalanceOrig']-data['amount']
 
-    cat_col=['type', 'nameOrig', 'nameDest']
+    #cat_col=['type', 'nameOrig', 'nameDest']
+    cat_col=['type']
     num_col=['step', 'amount', 'oldbalanceOrig', 'newbalanceOrig', 'oldbalanceDest',
        'newbalanceDest', 'dif_dest', 'amount_dif']
     print("--pre",data[cat_col])
@@ -102,7 +103,7 @@ async  def predict_fraud(item :ClientData):
   print("------------->",df.head())
   inp=preprocess(df)
   
-  model=joblib.load("./models/model.joblib", mmap_mode=None)
+  model=joblib.load("./models/model2.joblib", mmap_mode=None)
   # Getting the prediction 
   pred = model.predict(inp)[0]
   print(pred)
