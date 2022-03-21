@@ -2,6 +2,7 @@ import requests
 import json
 
 # url = "https://fraud-t-detection.herokuapp.com/"
+#url = "https://fraud-t-detection.herokuapp.com/predict-fraud"
 # # step: List[int]
 # #     type: List[str]
 # #     amount: List[float]
@@ -24,36 +25,36 @@ import json
 # #   "newbalanceDest": 0.443876228
 
 # # })
-payload = json.dumps(
-{
-  "step": [
-    0
-  ],
-  "type": [
-    "PAYMENT"
-  ],
-  "amount": [
-    0
-  ],
-  "nameOrig": [
-    "C1231006815"
-  ],
-  "oldbalanceOrig": [
-    0
-  ],
-  "newbalanceOrig": [
-    0
-  ],
-  "nameDest": [
-    "M1979787155"
-  ],
-  "oldbalanceDest": [
-    0
-  ],
-  "newbalanceDest": [
-    0
-  ]
-})
+# payload = json.dumps(
+# {
+#   "step": [
+#     0
+#   ],
+#   "type": [
+#     "PAYMENT"
+#   ],
+#   "amount": [
+#     0
+#   ],
+#   "nameOrig": [
+#     "C1231006815"
+#   ],
+#   "oldbalanceOrig": [
+#     0
+#   ],
+#   "newbalanceOrig": [
+#     0
+#   ],
+#   "nameDest": [
+#     "M1979787155"
+#   ],
+#   "oldbalanceDest": [
+#     0
+#   ],
+#   "newbalanceDest": [
+#     0
+#   ]
+# })
 
 # headers = {
 #   'Content-Type': 'application/json'
