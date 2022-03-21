@@ -44,9 +44,10 @@ def preprocess(train,test):
     test['dif_dest']=test['newbalanceDest']-test['oldbalanceDest']
     test['amount_dif']=test['newbalanceOrig']-test['amount']
     #cat and num col extractor
-    num_col=train.drop(['isFraud'], axis=1).select_dtypes(include=['int64','float64']).columns
-    cat_col= train.drop(['isFraud'], axis=1).select_dtypes(exclude=['int64','float64']).columns
-    # encoding
+    cat_col=['type']
+    num_col=['step', 'amount', 'oldbalanceOrig', 'newbalanceOrig', 'oldbalanceDest',
+       'newbalanceDest', 'dif_dest', 'amount_dif']
+     # encoding
     le=preprocessing.OrdinalEncoder()
     scaler=preprocessing.QuantileTransformer()
     concatinated=pd.concat([train[cat_col],test[cat_col]])
