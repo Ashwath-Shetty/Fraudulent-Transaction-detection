@@ -1,6 +1,9 @@
 # Fraudulent-Transaction-Detection
 ## Live Demo
-https://share.streamlit.io/ashwath-shetty/fraudulent-transaction-detection/main/app.py
+<br><li> to test with UI(currently not updated from the old version, so it might have some issue) 
+--> https://share.streamlit.io/ashwath-shetty/fraudulent-transaction-detection/main/app.py
+<br><li> Fast API(detailed instruction about how to test is in 'Testing the FastAPI'Section below
+--> https://fraud-t-detection.herokuapp.com/is-fraud
 
 ## Problem Statement
 You are provided a synthetic dataset for a mobile payments application. In this dataset, you are
@@ -43,7 +46,15 @@ How can i train the model?
 <br>after training model will be saved in models folder and train, test data used for training will be stored in the data folder.
 
 How to run the app on local host?
-<br><li>go to command prompt and navigate to project folder and enter streamlit run app.py
+<br> if you just want to check the deployed api, you can skip this and check the next section
+<br><li>to test streamlit UI based application -> go to command prompt and navigate to project folder and enter streamlit run app.py
+<br><li> go to command prompt and navigate to project folder and enter uvicorn fast_api:app --reload
+  <br> go to browser and visit http://127.0.0.1:8000/docs
+
+## Testing the FastAPI
+<br> <li>all you need is api_test.py file and python installed in the system. 
+<br> <li>just run the file using python api_test.py
+
     
 ## Technical Details
 <li>here's the complete EDA notebook
