@@ -67,7 +67,7 @@ you can assume that a transaction happens sequentially within the same time step
     <br>https://www.kaggle.com/ashwathshetty/plentina-code-challenge/notebook
 <li> some high level details about the modelling
     <br>1. 5 fold stratified cross validation has been used to evaluate the model. stratified is due to the imbalanced data.
-    <br>2. since the data is imbalanced roc-auc score is used as a evaluation metrics. train has an average score of 0.96184328592481 and test 0.9231405985587756
+    <br>2. since the data is imbalanced roc-auc score is used as a evaluation metrics. train has an average score of 0.97184328592481 and test 0.9431405985587756
     <br>3. multiple model has been tried and decision tree worked well at the end.
     <br>4. randomizedsearchcv with the same 5 folds as above mentioned has been used. (since the data is huge i have avoided the grid searchcv.)
     <br>5. finally all the models and configurations are exported to joblib format for inference and deployment.
@@ -75,7 +75,7 @@ you can assume that a transaction happens sequentially within the same time step
 ## Deployment
 <b>Streamlit Deployment</b>
 <li>Application has been deployed to streamlit cloud and connected github to streamlit for continuous deployment. every commit to the github will automatically deploy to the streamlit.
-<b>Fast API and Heroku Deployment</b>
+<br><b>Fast API and Heroku Deployment</b>
 <br><li>Fast API has been used to develop the API and it has been deployed to Heroku cloud platform.every commit to the github will automatically deploy to the Heroku for continuous deployment.
 <br><li>i haven't Dockerized the appication because my PC configuration is very poor but i have added the docker file for future improvements.
 <br><li> and also there's a Dockerrun.aws.json file which will help to deploy the dockerized container to AWS Fargate.
